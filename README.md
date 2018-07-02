@@ -46,6 +46,10 @@ Returns 0 on success, 1 if the item ID is invalid, 2 if the item exists but does
 not have any data stored with it and 3 if the item exists, has data but does not
 contain an entry for the specified `field`.
 
+### `GetItemFieldsAsJSON(Item:id, &Node:node)`
+
+Encodes an item dictionary to `Node:node` for use with JSON and Requests API.
+
 ## Testing
 
 To test, simply run the package:
