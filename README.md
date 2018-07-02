@@ -35,7 +35,7 @@ for `Array` variant.
 
 Returns 0 on success, 1 if the item ID is invalid.
 
-### `GSetItemFieldT(Item:id, field[], &value)`
+### `GetItemFieldT(Item:id, field[], &value)`
 
 Where T is one of `Int`, `Float`, `Array` or `String`..
 
