@@ -131,3 +131,25 @@ Test:ItemFieldString() {
     ret = GetItemFieldString(id2, "String1", got);
     ASSERT(ret == 2);
 }
+
+Test:GetItemFieldsAsJSON() {
+    new Item:id = CreateItem(item_Medkit);
+    new ret;
+
+    ret += SetItemFieldInt(id, "key1", 32);
+    ret += SetItemFieldFloat(id, "key2", 42.7);
+    // TODO: JsonSetArray is needed for this
+    // ret += SetItemFieldArray(id, "key3", {2, 4, 6, 8});
+    ret += SetItemFieldString(id, "key4", "value");
+    ASSERT(ret == 0);
+
+    new Node:node;
+    ret = GetItemFieldsAsJSON(id, node);
+    ASSERT(ret == 0);
+
+    new buf[512];
+    JsonStringify(node, buf);
+    print(buf);
+
+    ASSERT(!strcmp(buf, "{\"key1\":32,\"key2\":42.700000762939453,\"key4\":\"value\"}"));
+}
