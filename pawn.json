@@ -5,10 +5,10 @@
 	"output": "test.amx",
 	"dependencies": [
 		"sampctl/samp-stdlib",
-		"Southclaws/samp-logger:1.2.6",
-		"ScavengeSurvive/item:1.10.5",
+		"Southclaws/samp-logger",
+		"ScavengeSurvive/item",
 		"BigETI/pawn-map",
-		"Southclaws/pawn-requests:0.8.2"
+		"Southclaws/pawn-requests"
 	],
 	"dev_dependencies": [
 		"pawn-lang/YSI-Includes",
